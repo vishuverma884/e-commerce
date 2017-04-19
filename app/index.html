@@ -1,16 +1,30 @@
 <html>
     <base href="/">
+    <!--START Adding CSS here-->
+    <link rel="stylesheet" href="libs/bootstrap.min.css"/>
+    <!--STOP Adding CSS here-->
+
     <!--START Body Container-->
     <body ng-app="app">        
+        <div class="row">
+            <div class="col-xs-12">
+                <a ng-href="/">Home</a>&nbsp;|&nbsp;
+                <a ng-href="/account">Account</a>&nbsp;|&nbsp;
+                <a ng-href="/account/head">Account Header</a>&nbsp;|&nbsp;
+                <a ng-href="/account/foot">Account Footer</a>
+            </div>
+        </div>
         <!--START Application Container-->
         <div ui-view></div>
         <!--STOP Application Container-->
     </body>
     <!--STOP Body Container-->
+
 <!--START Adding Scripts here-->
     <!--START Adding Libraries here-->
     <script src="libs/angular.min.js"></script>
     <script src="libs/angular-ui-router.min.js"></script>
+    <script src="libs/oauth.js"></script>
     <script src="libs/jquery.min.js"></script>
     <script src="libs/bootstrap.min.js"></script>
     <!--STOP Adding Libraries here-->
@@ -29,6 +43,8 @@
 
         <!--START Common Module-->
         <script src="modules/common/app.common.js"></script>
+        <script src="modules/common/controller/common.store.ctrl.js"></script>
+        <script src="modules/common/pojo/common.citylist.pojo.js"></script>
         <!--STOP Common Module-->
 
         <!--START Detail Module-->
@@ -44,7 +60,10 @@
         <!--STOP List Module-->
 
         <!--START Utils Module-->
-        <script src="modules/utils/app.utils.js"></script>
+        <script src="modules/utils/app.utils.js"></script>     
+        <script src="modules/utils/injectable/utils.constants.js"></script>
+        <script src="modules/utils/injectable/utils.oauthinterceptor.js"></script>
+        <script src="modules/utils/injectable/utils.remotecall.js"></script>
         <!--STOP Utils Module-->
 
     <!--START Adding Config Files-->

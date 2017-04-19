@@ -25,8 +25,17 @@ module.exports = function(grunt){
                         'angular/angular.min.js',
                         'angular-ui-router/release/angular-ui-router.min.js',
                         'jquery/dist/jquery.min.js',
-                        'bootstrap/dist/js/bootstrap.min.js'
+                        'bootstrap/dist/js/bootstrap.min.js',
+                        'bootstrap/dist/css/bootstrap.min.css'
                         ],
+                    dest:'build/libs/'
+                },{
+                    expand:true,
+                    flatten:true,
+                    cwd:'external_components',
+                    src:[
+                        'oauth.js'
+                    ],
                     dest:'build/libs/'
                 }]                                  
             }

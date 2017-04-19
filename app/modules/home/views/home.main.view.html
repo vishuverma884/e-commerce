@@ -1,7 +1,11 @@
 <div>Hello World</div>
 <div class="row">
-    <div class="col-xs-3" ><a ng-href="/">Home</a></div>    
-    <div class="col-xs-3"><a ng-href="#!/account">Account</a></div>
-    <div class="col-xs-3"><a ng-href="#!/account/head">Account Header</a></div>    
-    <div class="col-xs-3"><a ng-href="#!/account/foot">Account Footer</a></div>
+    <div class="col-xs-12">
+        <ol>
+            <li ng-repeat="(citykey,cityval) in storeVm.citylist">{{cityval+'  -  '+citykey}}</li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+{{storeVm.productList}}
 </div>
